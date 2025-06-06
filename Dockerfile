@@ -3,12 +3,6 @@ FROM python:3.10-slim
 # Install Flask
 RUN pip install flask
 
-# Create app folder
-WORKDIR /app
-
-# Copy website files into app folder
-COPY . /app
-
 # Create simple Flask server
 RUN echo "\
 from flask import Flask, send_from_directory\n\
